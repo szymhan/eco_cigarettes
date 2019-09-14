@@ -385,6 +385,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   void dispose() {
     this.myPeopleCountTextController.dispose();
+    super.dispose();
   }
 
   @override
