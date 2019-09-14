@@ -12,7 +12,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   @override
   void initState() {
-    testUser = new User("Hanzellberg", "assets/prince.jpeg", 0);
+    testUser = new User("Hanzellberg", "assets/prince.png", 0);
   }
 
   @override
