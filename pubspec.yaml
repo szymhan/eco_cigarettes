@@ -46,9 +46,7 @@ flutter:
         - asset: fonts/GentiumBookBasic-Bold.ttf
           weight: 700
   assets:
-    -  assets/spraying.png
-    -  assets/deposit.jpeg
-    - assets/supercapacitor.jpg
+    -  assets/
   uses-material-design: true
 
 
