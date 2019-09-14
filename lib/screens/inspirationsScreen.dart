@@ -154,7 +154,7 @@ List getInspirations() {
     Inspiration(
         author: 'Maggie B.',
         date: '2019-08-30',
-        content: 'tekst',
+        content: 'A Berliner has launched a petition demanding a deposit of 20 cent on every cigarette sold in Germany in a bid to reduce litter and environmental pollution.\nEach day more than 200 million cigarettes are smoked in Germany and the vast majority end up on the street, in parks and, sooner or later, in our waterways,” he writes in the petition. “I’m sure that, with a deposit, we would sideline around 90 per cent of all butts.”\nHis proposal would see a €4 surcharge on a pack of cigarettes, refundable if the smoker returns the package with all butts inside. One idea is to force cigarette companies to redesign their packaging to include mobile, sealable ashtrays for ash and cigarette butts. The pack/ashtray could be reusable and should be subject to a deposit, suggests Mr Von Orlow.',
         image: "assets/deposit.jpeg",
         title: 'Pay deposit for each packet of cigarettes'),
   ];
