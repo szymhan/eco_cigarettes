@@ -39,15 +39,9 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text("Using Bottom Navigation Bar"),
-        // Set the background color of the App Bar
-        backgroundColor: Colors.blue,
-      ),
-      // Set the TabBar view as the body of the Scaffold
-      body: TabBarView(
+
+      body:  TabBarView(
+
         // Add tabs as widgets
         children: <Widget>[MainScreen(), MainScreen()],
         // set the controller
@@ -55,24 +49,28 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       ),
       // Set the bottom navigation bar
       bottomNavigationBar: Material(
+
         // set the color of the bottom navigation bar
-        color: Colors.blue,
+        color: Colors.white24,
         // set the tab bar as the child of bottom navigation bar
-        child: TabBar(
+        child: SafeArea(
+          child: TabBar(
           tabs: <Tab>[
             Tab(
               // set icon to the tab
-              icon: Icon(Icons.favorite),
+              icon: Icon(Icons.lightbulb_outline,
+              color: Colors.orange,),
             ),
             Tab(
-              icon: Icon(Icons.adb),
+              icon: Icon(Icons.event,
+                color: Colors.orange),
             ),
           ],
           // setup the controller
           controller: controller,
         ),
       ),
-    );
+    ));
   }
 }
 

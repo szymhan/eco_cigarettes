@@ -11,7 +11,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white70,
       body: Container(
         child: Center(
           child: Column(
@@ -21,11 +21,11 @@ class _MainScreenState extends State<MainScreen> {
               Icon(
                 Icons.favorite,
                 size: 160.0,
-                color: Colors.white,
+                color: Colors.red,
               ),
               Text(
                 "Tab",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.red),
               )
             ],
           ),
