@@ -28,20 +28,46 @@ class ArticleScreen extends StatelessWidget {
 
                 ),
               ),
-//        child: Text(
-//          'Test',
-//        style: TextStyle(color: Colors.white,
-//            fontFamily: 'FiraSans',
-//            fontWeight: FontWeight.bold),
-//        ),
             ),
         ),
             const Padding(padding: EdgeInsets.only(top: 10.0)),
-         Text(inspiration.title),
-            Text('by ' + inspiration.author),
-            Text(inspiration.date),
-          const Padding(padding: EdgeInsets.only(top: 45.0)),
-            Text(inspiration.content),
+         Text(inspiration.title,
+             textAlign: TextAlign.center,
+             style: TextStyle(
+               fontWeight: FontWeight.bold,
+             fontFamily: 'GentiumBookBasic',
+             fontSize: 30)
+           ,),
+            const Padding(padding: EdgeInsets.only(top: 10.0)),
+            SizedBox(
+              width: double.infinity,
+              child: Text('by ' + inspiration.author,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      fontFamily: 'GentiumBookBasic',
+                      fontSize: 15)),
+            ),
+      const Padding(padding: EdgeInsets.only(top: 5.0)),
+      SizedBox(
+        width: double.infinity,
+        child: Text(inspiration.date,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                fontFamily: 'GentiumBookBasic',
+                fontSize: 15))),
+          const Padding(padding: EdgeInsets.only(top: 35.0)),
+      Expanded(
+        child: SingleChildScrollView(
+          child: Text(inspiration.content,
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+
+                fontFamily: 'GentiumBookBasic',
+                fontSize: 22)
+            ,),
+        ),
+      ),
           ],
         ),
       ),

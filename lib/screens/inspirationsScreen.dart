@@ -142,13 +142,13 @@ List getInspirations() {
     Inspiration(
         author: 'Agatha C.',
         date: '2019-09-10',
-        content: 'tekst',
+        content: 'Nicotine sprays are a traditional remedy for a range of pests, including whiteflies, gnats, root and leaf aphids, thrips and leafminers. While commercial nicotine sprays are so potent that they can kill as many beneficial insects as plant predators, homemade "tobacco juice" is short-lived and much milder. Used sparingly, it may be an important member in your arsenal of natural pest control.',
         image: "assets/spraying.png",
         title: 'Spraying flowers with tobacco water'),
     Inspiration(
         author: 'Mark Z.',
         date: '2019-09-01',
-        content: 'tekst',
+        content: 'The material inside cigarette filters is a synthetic fiber called cellulose acetate that, when heated in the presence of nitrogen, turns into a carbon-based material full of pores. The pores contribute to its high surface area, making it good for supercapacitors. When the team tested it for how well it charged and discharged electrons, they found it worked better than commercially available materials—as well as graphene and carbon nanotubes, as reported in previous studies.',
         image: "assets/supercapacitor.jpg",
         title: 'Transform butts into supercapacitors'),
     Inspiration(

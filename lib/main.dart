@@ -44,9 +44,6 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Colors.white
-    ));
     return Scaffold(
       body:  TabBarView(
 
