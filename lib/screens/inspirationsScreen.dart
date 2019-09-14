@@ -98,12 +98,6 @@ class _InspirationPageState extends State<InspirationPage> {
       ),
       ), 
         child: makeListTile(inspiration),
-//        child: Text(
-//          'Test',
-//        style: TextStyle(color: Colors.white,
-//            fontFamily: 'FiraSans',
-//            fontWeight: FontWeight.bold),
-//        ),
       ),
 
     );

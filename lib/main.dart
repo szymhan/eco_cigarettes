@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:eco_cigarettes/screens/inspirationsScreen.dart';
-import 'package:eco_cigarettes/screens/mainScreen.dart';
+import 'package:eco_cigarettes/screens/eventsScreen.dart';
 import 'package:flutter/services.dart';
 import 'screens/calcScreen.dart';
 import 'screens/userProfileScreen.dart';
@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[CalculatorScreen(), InspirationPage(), MainScreen(), UserProfileScreen()],
+        children: <Widget>[CalculatorScreen(), InspirationPage(), EventsScreen(), UserProfileScreen()],
         // set the controller
         controller: controller,
       ),
