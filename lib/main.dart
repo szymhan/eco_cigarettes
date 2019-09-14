@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:eco_cigarettes/screens/mainScreen.dart';
+import 'screens/calcScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -43,7 +44,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[MainScreen(), MainScreen(), MainScreen()],
+        children: <Widget>[CalculatorScreen(), MainScreen(), MainScreen()],
         // set the controller
         controller: controller,
       ),
