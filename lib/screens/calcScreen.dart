@@ -260,7 +260,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     children: <Widget>[
                       Text("Single action time in minutes: ", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                       Container(
-                        width: 20,
+                        width: 35,
                         child: TextField(
                           controller: mySingleActionTimeTextController,
                           keyboardType: TextInputType.number,
@@ -299,7 +299,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 //                      width: MediaQuery.of(context).size.width*0.4,
 //                      ),
                 Container(
-                  width: 20,
+                  width: 25,
                   child: TextField(
                     keyboardType: TextInputType.number,
                     maxLength: 2,
