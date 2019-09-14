@@ -129,10 +129,19 @@ class _InspirationPageState extends State<InspirationPage> {
       style: _topBarStyle),
     );
 
+    final makeFloatingButton =  FloatingActionButton(
+    onPressed: () {
+    // Add your onPressed code here!
+    },
+    child: Icon(Icons.plus_one),
+    backgroundColor: Colors.deepOrange,
+    );
+
     return Scaffold(
       backgroundColor: Colors.white70,
       appBar: topAppBar,
       body: makeBody,
+      floatingActionButton: makeFloatingButton,
     );
   }
 }
