@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:eco_cigarettes/screens/inspirationsScreen.dart';
 import 'package:eco_cigarettes/screens/mainScreen.dart';
 import 'screens/calcScreen.dart';
 
@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[CalculatorScreen(), MainScreen(), MainScreen()],
+        children: <Widget>[CalculatorScreen(), InspirationPage(), MainScreen()],
         // set the controller
         controller: controller,
       ),
@@ -58,7 +58,14 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
         // set the tab bar as the child of bottom navigation bar
         child: SafeArea(
           child: TabBar(
-          tabs: <Tab>[
+            indicator: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(
+                      width: 3,
+                      color: Colors.orange
+                      )
+              )),
+            tabs: <Tab>[
             Tab(
               // set icon to the tab
               icon: Icon(Icons.exposure,
