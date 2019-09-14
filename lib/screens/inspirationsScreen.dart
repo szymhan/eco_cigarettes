@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:eco_cigarettes/model/Inspiration.dart';
+import 'package:eco_cigarettes/article.dart';
 
 class InspirationPage extends StatefulWidget {
 InspirationPage({Key key, this.title}) : super(key: key);
@@ -72,7 +73,8 @@ class _InspirationPageState extends State<InspirationPage> {
         ],
       ),
       onTap: () {
-
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => ArticleScreen(inspiration : inspiration)));
       },
     );
 
@@ -120,6 +122,7 @@ class _InspirationPageState extends State<InspirationPage> {
 
 
     final topAppBar = AppBar(
+      centerTitle: true,
       elevation: 0.1,
       backgroundColor: Colors.white,
       title: Text('Inspirations',

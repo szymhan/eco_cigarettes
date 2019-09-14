@@ -40,6 +40,11 @@ flutter:
         - asset: fonts/FiraSans-Light.ttf
         - asset: fonts/FiraSans-Bold.ttf
           weight: 700
+    - family: GentiumBookBasic
+      fonts:
+        - asset: fonts/GentiumBookBasic-Regular.ttf
+        - asset: fonts/GentiumBookBasic-Bold.ttf
+          weight: 700
   assets:
     -  assets/spraying.png
     -  assets/deposit.jpeg
