@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = TabController(length: 2, vsync: this);
+    controller = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[MainScreen(), MainScreen()],
+        children: <Widget>[MainScreen(), MainScreen(), MainScreen()],
         // set the controller
         controller: controller,
       ),
@@ -56,6 +56,11 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
         child: SafeArea(
           child: TabBar(
           tabs: <Tab>[
+            Tab(
+              // set icon to the tab
+              icon: Icon(Icons.exposure,
+                color: Colors.orange,),
+            ),
             Tab(
               // set icon to the tab
               icon: Icon(Icons.lightbulb_outline,
