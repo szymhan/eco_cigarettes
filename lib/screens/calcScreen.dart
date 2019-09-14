@@ -94,7 +94,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     List<Widget> listItems = List();
 
     listItems.add(new Padding(
-        padding: new EdgeInsets.only(left: 20, right: 20, top: 20), child: numberOfPeople()), );
+        padding: new EdgeInsets.only(left: 20, right: 20, top: 40), child: numberOfPeople()), );
 
     listItems.add(new Padding(
         padding: new EdgeInsets.symmetric(horizontal: 20), child: singleOrRegular()), );
