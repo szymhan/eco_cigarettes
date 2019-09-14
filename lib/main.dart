@@ -7,6 +7,9 @@ void main() {
   runApp(MaterialApp(
     // Title
       title: "Using Tabs",
+      theme: ThemeData(
+        backgroundColor: Colors.white24,
+      ),
       // Home
       home: MyApp()));
 }
@@ -52,7 +55,6 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       bottomNavigationBar: Material(
 
         // set the color of the bottom navigation bar
-        color: Colors.white24,
         // set the tab bar as the child of bottom navigation bar
         child: SafeArea(
           child: TabBar(
