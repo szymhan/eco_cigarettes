@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:eco_cigarettes/model/event.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EventsScreen extends StatefulWidget {
   static const routeName = 'events-screen';
@@ -57,7 +58,10 @@ class _EventsScreenState extends State<EventsScreen> {
         ],
       ),
       trailing:
-      Icon(FontAwesomeIcons.facebookSquare, color: Color.fromRGBO(158, 202, 232, 1), size: 30.0),
+      Icon(FontAwesomeIcons.facebookSquare,
+          color: Color.fromRGBO(158, 202, 232, 1),
+          size: 30.0,),
+        onTap: _launchURL,
     );
 
     Card makeCard(Event event) => Card(
@@ -95,7 +99,7 @@ class _EventsScreenState extends State<EventsScreen> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 26,
-                fontFamily: 'FitaSans',
+                fontFamily: 'FiraSans',
               ),
               ),
               const Padding(padding: EdgeInsets.only(top: 20.0)),
@@ -112,6 +116,15 @@ class _EventsScreenState extends State<EventsScreen> {
         ),
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://www.facebook.com/events/704778479971352/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
