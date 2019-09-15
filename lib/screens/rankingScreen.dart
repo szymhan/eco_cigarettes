@@ -23,15 +23,21 @@ class _RankingScreenState extends State<RankingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 32),
-        child: makeBody,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("User Ranking", style: TextStyle(color: Colors.black54),),
+        elevation: 0.1,
+          backgroundColor: Colors.white
+      ),
+      body: Container(
+          child: makeBody,
       ),
     );
   }
 }
 final makeBody = Container(
+  color: Colors.white,
   child: ListView.builder(
     scrollDirection: Axis.vertical,
     shrinkWrap: true,
@@ -50,7 +56,6 @@ final makeBody = Container(
      margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
      shape: RoundedRectangleBorder(
        borderRadius: BorderRadius.circular(25.0),
-       side: BorderSide(width: 1)
      ),
      child: Container(
        decoration: BoxDecoration(color: Colors.orange,),
@@ -85,7 +90,7 @@ makeListTile(int index) {
           ),
           index==0 ?
           Text("You've " + mockUsers[index].buttsCollected.toString() + " butts total", style: TextStyle(color: Colors.white))
-              :Text("This username has " + mockUsers[index].buttsCollected.toString() + " butts collected", style: TextStyle(color: Colors.white))
+              :Text("Buts total: " + mockUsers[index].buttsCollected.toString(), style: TextStyle(color: Colors.white))
         ],
       ),
       trailing:

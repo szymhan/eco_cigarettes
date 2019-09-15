@@ -40,6 +40,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     int totalButts = preferences.getInt("total-butts") ?? 0;
     this.testUser.buttsCollected = totalButts;
     isFetching = false;
+    setState(() {});
   }
 
   @override
