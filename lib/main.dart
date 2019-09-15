@@ -4,6 +4,7 @@ import 'package:eco_cigarettes/screens/eventsScreen.dart';
 import 'package:flutter/services.dart';
 import 'screens/calcScreen.dart';
 import 'screens/userProfileScreen.dart';
+import 'screens/rankingScreen.dart';
 
 
 void main() {
@@ -33,7 +34,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = TabController(length: 4, vsync: this);
+    controller = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -49,7 +50,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[CalculatorScreen(), InspirationPage(), EventsScreen(), UserProfileScreen()],
+        children: <Widget>[CalculatorScreen(), InspirationPage(), EventsScreen(), UserProfileScreen(), RankingScreen()],
         // set the controller
         controller: controller,
       ),
@@ -63,7 +64,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
             indicator: BoxDecoration(
               border: Border(
                   bottom: BorderSide(
-                      width: 4,
+                      width: 5,
                       color: Colors.orange
                       )
               )),
@@ -83,6 +84,9 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
                 color: Colors.orange),
             ),Tab(
               icon: Icon(Icons.person_outline,
+                color: Colors.orange),
+            ),Tab(
+              icon: Icon(Icons.insert_chart,
                 color: Colors.orange),
             ),
           ],

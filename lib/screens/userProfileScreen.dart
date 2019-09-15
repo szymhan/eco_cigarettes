@@ -77,68 +77,86 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Center(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: isFetching ? Center(
-    child: CircularProgressIndicator(),
-    ):Column(
-                              children: <Widget>[
-                                Text(
-                                  "You've managed to gather",
+                child: Column(
+                  children: <Widget>[
+                    Card(
+                      semanticContainer: true,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      margin: EdgeInsets.all(5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Container(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: isFetching ? Center(
+                          child: CircularProgressIndicator(),) : Column(
+                            children: <Widget>[
+                              Text(
+                                "You've managed to gather",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Text(
+                                  testUser.buttsCollected.toString(),
                                   style: TextStyle(
-                                    fontSize: 20,
-                                  ),
+                                      fontSize: 25, fontWeight: FontWeight.bold),
                                   textAlign: TextAlign.center,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Text(
-                                    testUser.buttsCollected.toString(),
-                                    style: TextStyle(
-                                        fontSize: 25, fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                              ),
+                              Text(
+                                " cigarret butts for now!",
+                                style: TextStyle(
+                                  fontSize: 20,
                                 ),
-                                Text(
-                                  " cigarret butts for now!",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
-                            ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            "Good job, keep this up!",
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                            textAlign: TextAlign.center,
-                            softWrap: true,
-                          ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        "Good job, keep this up!",
+                        style: TextStyle(
+                          fontSize: 18,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Text(
-                            mockFunFacts[rng],
-                            style: TextStyle(
-                              fontSize: 18,
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Card(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            Text('Random fact',  style: TextStyle(
+                              fontSize: 14,
                             ),
-                            textAlign: TextAlign.center,
-                            softWrap: true,
-                          ),
+                            textAlign: TextAlign.right,),
+                            Text(
+                              mockFunFacts[rng],
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                              textAlign: TextAlign.center,
+                              softWrap: true,
+                            ),
+                          ],
                         ),
+                      ),
+                    ),
 
-                      ],
-                    )),
+                  ],
+                ),
               ),
               Container(
                 alignment: Alignment.bottomCenter,
