@@ -143,6 +143,12 @@ class _InspirationPageState extends State<InspirationPage> {
 List getInspirations() {
   return [
     Inspiration(
+        author: 'Fenghu Z.',
+        date: '2019-10-03',
+        content: 'A campaign to keep the streets in Xianyang, Shaanxi province clean by offering residents cold hard cash for each discarded cigarette butt they pick up in urban areas has erupted in a dispute, but local leaders are sticking to their principles.\nIn the past month, loyal citizens have handed over a total of 7 million cigarette butts to the government and more than 100,000 yuan has been paid out for 2 million of the undesirable things. A shortage of funds has kept the other 5 million butts from being paid for.',
+        image: "assets/collecting.png",
+        title: 'Exchange butts for real cash'),
+    Inspiration(
         author: 'Agatha C.',
         date: '2019-09-10',
         content: 'Nicotine sprays are a traditional remedy for a range of pests, including whiteflies, gnats, root and leaf aphids, thrips and leafminers. While commercial nicotine sprays are so potent that they can kill as many beneficial insects as plant predators, homemade "tobacco juice" is short-lived and much milder. Used sparingly, it may be an important member in your arsenal of natural pest control.',

@@ -3,10 +3,10 @@ import 'package:eco_cigarettes/models/User.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List<User> mockUsers = [
-  new User("You - Mark Z.", "assets/prince.png", 9925, "Warsaw"),
+  new User("You - Mark Z.", "assets/prince.png", 9925, "Warszawa"),
   new User("Simon B.", "assets/avatar1.png", 8521, "Lodz"),
-  new User("Leo M.", "assets/avatar2.png", 8210, "London"),
-  new User("Lambert FF.", "assets/avatar3.png", 6501, "New York"),
+  new User("Leo M.", "assets/avatar2.png", 8210, "Żyrardów"),
+  new User("Lambert F.", "assets/avatar3.png", 6501, "Siedlce"),
   new User("Carol Z.", "assets/avatar4.png", 5513, "Sosnowiec"),
   new User("Jeff B.", "assets/avatar5.png", 4896, "Bialystok"),
   new User("Steve W.", "assets/avatar6.png", 4756, "Zabrze"),
