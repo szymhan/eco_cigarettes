@@ -3,13 +3,13 @@ import 'package:eco_cigarettes/models/User.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List<User> mockUsers = [
-  new User("You - Mark Z.", "assets/prince.png", 9925),
-  new User("Simon B.", "assets/avatar1.png", 8521),
-  new User("Leo M.", "assets/avatar2.png", 8210),
-  new User("Lambert FF.", "assets/avatar3.png", 6501),
-  new User("Carol Z.", "assets/avatar4.png", 5513),
-  new User("Jeff B.", "assets/avatar5.png", 4896),
-  new User("Steve W.", "assets/avatar6.png", 4756),
+  new User("You - Mark Z.", "assets/prince.png", 9925, "Warsaw"),
+  new User("Simon B.", "assets/avatar1.png", 8521, "Lodz"),
+  new User("Leo M.", "assets/avatar2.png", 8210, "London"),
+  new User("Lambert FF.", "assets/avatar3.png", 6501, "New York"),
+  new User("Carol Z.", "assets/avatar4.png", 5513, "Sosnowiec"),
+  new User("Jeff B.", "assets/avatar5.png", 4896, "Bialystok"),
+  new User("Steve W.", "assets/avatar6.png", 4756, "Zabrze"),
 //  new User("OPOOOooO12", "assets/prince.png", 3542),
 //  new User("Wojtus12", "assets/prince.png", 2541),
 ];
@@ -97,7 +97,16 @@ makeListTile(int index) {
           ),
           index==0 ?
           Text("You've " + mockUsers[index].buttsCollected.toString() + " butts total", style: TextStyle(color: Colors.white))
-              :Text("Buts total: " + mockUsers[index].buttsCollected.toString(), style: TextStyle(color: Colors.white))
+              :Text("Butts total: " + mockUsers[index].buttsCollected.toString(), style: TextStyle(color: Colors.white)),
+
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text(mockUsers[index].city, style: TextStyle(color: Colors.white), textAlign: TextAlign.right,),
+              ],
+            ),
+          ),
         ],
       ),
       trailing:

@@ -45,7 +45,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   @override
   void initState() {
-    testUser = new User("Mark Z.", "assets/prince.png", 0);
+    testUser = new User("Mark Z.", "assets/prince.png", 0, "Warsaw");
     fetchStoredButts();
     rng = new Random().nextInt(mockFunFacts.length);
   }
