@@ -3,15 +3,15 @@ import 'package:eco_cigarettes/models/User.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List<User> mockUsers = [
-  new User("You - Hanzellberg", "assets/prince.png", 9925),
-  new User("Han Szyn", "assets/prince.png", 8521),
-  new User("File Lehow", "assets/prince.png", 8210),
-  new User("Lambert Filew", "assets/prince.png", 6501),
-  new User("Twojja Starra", "assets/prince.png", 5513),
-  new User("Mauppa Gorrlla", "assets/prince.png", 4896),
-  new User("Korwinnnum Procentum", "assets/prince.png", 4756),
-  new User("OPOOOooO12", "assets/prince.png", 3542),
-  new User("Wojtus12", "assets/prince.png", 2541),
+  new User("You - Mark Z.", "assets/prince.png", 9925),
+  new User("Simon Boat", "assets/avatar1.png", 8521),
+  new User("Leo120", "assets/avatar2.png", 8210),
+  new User("Lambert Filew", "assets/avatar3.png", 6501),
+  new User("Twojja Starra", "assets/avatar4.png", 5513),
+  new User("Mauppa Gorrlla", "assets/avatar5.png", 4896),
+  new User("Korwinnnum Procentum", "assets/avatar6.png", 4756),
+//  new User("OPOOOooO12", "assets/prince.png", 3542),
+//  new User("Wojtus12", "assets/prince.png", 2541),
 ];
 
 class RankingScreen extends StatefulWidget {
@@ -67,10 +67,17 @@ final makeBody = Container(
 
 makeListTile(int index) {
  return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
       leading: Container(
+        width: 60,
 //        padding: EdgeInsets.only(right: 12.0),
-        child: Icon(FontAwesomeIcons.userCircle, color: Colors.white, size: 40,),
+        //child: Icon(FontAwesomeIcons.userCircle, color: Colors.white, size: 40,),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(35),
+          image: DecorationImage(
+            image: AssetImage(mockUsers[index].avatar),
+          ),
+        ),
       ),
       title: Text(
         mockUsers[index].username,
@@ -94,6 +101,6 @@ makeListTile(int index) {
         ],
       ),
       trailing:
-      Text((index+1).toString(), style: TextStyle(color: Colors.white, fontSize: 32)),
+      Text((index+1).toString()+".", style: TextStyle(color: Colors.white, fontSize: 32)),
  );
 }

@@ -399,6 +399,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("Calculator"
+              "", style: TextStyle(color: Colors.black54),),
+          elevation: 0.1,
+          backgroundColor: Colors.white
+      ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(delegate: new SliverChildListDelegate(_buildList(50))),
