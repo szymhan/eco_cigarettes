@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:eco_cigarettes/models/time.dart';
 import 'package:eco_cigarettes/models/pollution.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 //I know that this code is ugly, I'm fully ashamed of it :(
@@ -31,6 +33,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   List<DropdownMenuItem<PollutionLevel>> _dropdownPollutionLevelMenuItems;
   PollutionLevel _selectedPollutionLevel;
 
+  saveTotalButts() async {
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    int totalButts = preferences.getInt("total-butts") ?? 0;
+    preferences.setInt("total-butts", this.buttsNumber + totalButts);
+  }
+
 
   @override
   void initState() {
@@ -38,7 +46,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     _selectedPeriod = _dropdownPeriodMenuItems[0].value;
 
     _dropdownPollutionLevelMenuItems = buildDropdownPollutionLevelMenuItems(_pollutionLevels);
-    _selectedPollutionLevel = _dropdownPollutionLevelMenuItems[0].value;
+    _selectedPollutionLevel = _dropdownPollutionLevelMenuItems[2].value;
 
     myPeopleCountTextController.addListener(updatePeopleCount);
     myPeopleCountTextController.text = "1";
@@ -395,6 +403,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         slivers: <Widget>[
           SliverList(delegate: new SliverChildListDelegate(_buildList(50))),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          saveTotalButts();
+        },
+        child: Icon(FontAwesomeIcons.shareSquare),
+        backgroundColor: Colors.deepOrange,
       ),
     );
   }

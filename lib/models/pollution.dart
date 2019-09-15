@@ -7,7 +7,7 @@ class PollutionLevel {
 
   static List<PollutionLevel> getPollutionLevel() {
     List<PollutionLevel> pollution = [
-      new PollutionLevel(1, "Mandess (beach)"),
+      new PollutionLevel(1, "Madness (beach)"),
       new PollutionLevel(2, "Very High (park)"),
       new PollutionLevel(3, "High (big city)"),
       new PollutionLevel(4, "Medium (small city)")
