@@ -4,12 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List<User> mockUsers = [
   new User("You - Mark Z.", "assets/prince.png", 9925),
-  new User("Simon Boat", "assets/avatar1.png", 8521),
-  new User("Leo120", "assets/avatar2.png", 8210),
-  new User("Lambert Filew", "assets/avatar3.png", 6501),
-  new User("Twojja Starra", "assets/avatar4.png", 5513),
-  new User("Mauppa Gorrlla", "assets/avatar5.png", 4896),
-  new User("Korwinnnum Procentum", "assets/avatar6.png", 4756),
+  new User("Simon B.", "assets/avatar1.png", 8521),
+  new User("Leo M.", "assets/avatar2.png", 8210),
+  new User("Lambert FF.", "assets/avatar3.png", 6501),
+  new User("Carol Z.", "assets/avatar4.png", 5513),
+  new User("Jeff B.", "assets/avatar5.png", 4896),
+  new User("Steve W.", "assets/avatar6.png", 4756),
 //  new User("OPOOOooO12", "assets/prince.png", 3542),
 //  new User("Wojtus12", "assets/prince.png", 2541),
 ];

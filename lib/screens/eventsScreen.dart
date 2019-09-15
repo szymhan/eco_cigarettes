@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:eco_cigarettes/model/event.dart';
+import 'package:eco_cigarettes/models/event.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EventsScreen extends StatefulWidget {

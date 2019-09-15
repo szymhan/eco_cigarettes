@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:eco_cigarettes/model/Inspiration.dart';
+import 'package:eco_cigarettes/models/Inspiration.dart';
 import 'package:eco_cigarettes/article.dart';
 
 class InspirationPage extends StatefulWidget {

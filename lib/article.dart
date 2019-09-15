@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:eco_cigarettes/model/Inspiration.dart';
+import 'package:eco_cigarettes/models/Inspiration.dart';
 
 
 class ArticleScreen extends StatelessWidget {

@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
       body:  TabBarView(
 
         // Add tabs as widgets
-        children: <Widget>[CalculatorScreen(), InspirationPage(), EventsScreen(), UserProfileScreen(), RankingScreen()],
+        children: <Widget>[EventsScreen(), CalculatorScreen(), InspirationPage(), UserProfileScreen(), RankingScreen()],
         // set the controller
         controller: controller,
       ),
@@ -69,6 +69,10 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
                       )
               )),
             tabs: <Tab>[
+              Tab(
+                icon: Icon(Icons.event,
+                    color: Colors.orange),
+              ),
             Tab(
               // set icon to the tab
               icon: Icon(Icons.exposure,
@@ -80,9 +84,6 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin  {
               color: Colors.orange,),
             ),
             Tab(
-              icon: Icon(Icons.event,
-                color: Colors.orange),
-            ),Tab(
               icon: Icon(Icons.person_outline,
                 color: Colors.orange),
             ),Tab(
