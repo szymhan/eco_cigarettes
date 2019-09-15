@@ -8,6 +8,7 @@ import 'screens/rankingScreen.dart';
 
 
 void main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
   runApp(MaterialApp(
     // Title
       title: "Using Tabs",
@@ -16,6 +17,8 @@ void main() {
       ),
       // Home
       home: MyApp()));
+}
+      );
 }
 
 class MyApp extends StatefulWidget {
