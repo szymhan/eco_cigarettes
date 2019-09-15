@@ -190,7 +190,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                             Text(
                               'Did you know, that...',
                               style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 15,
+                              fontStyle: FontStyle.italic,
                               color: Colors.grey
                             ),
                             textAlign: TextAlign.center,),
