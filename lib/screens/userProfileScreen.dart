@@ -40,8 +40,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     int totalButts = preferences.getInt("total-butts") ?? 0;
     this.testUser.buttsCollected = totalButts;
     isFetching = false;
-    setState(() {
-    });
   }
 
   @override
@@ -61,7 +59,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 32, right: 32, left: 32, bottom: 24),
+                    top: 52, right: 32, left: 32, bottom: 24),
                 child: Container(
                   height: MediaQuery.of(context).size.height*0.12,
                   decoration: BoxDecoration(
